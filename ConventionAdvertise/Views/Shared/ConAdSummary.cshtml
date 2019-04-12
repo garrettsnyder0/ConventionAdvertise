@@ -1,6 +1,11 @@
 ﻿@model ConventionAdvertise.Models.ConInformation
 
+
 <h2>@Model.ConName</h2>
+
+@{ 
+    List<string> hotels = @Model.Hotels.Split(',').ToList<string>();
+}
 <ul>
     <li>Official Website: @Model.Website</li>
     <li>Location: @Model.LocationOf</li>

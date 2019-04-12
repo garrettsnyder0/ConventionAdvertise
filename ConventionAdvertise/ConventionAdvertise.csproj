@@ -119,6 +119,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\MyStyles.css" />
     <Content Include="Global.asax" />
     <Content Include="Models\ConAds.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -224,6 +225,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\ConAdSummary.cshtml" />
+    <Content Include="Views\Home\AddCon.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

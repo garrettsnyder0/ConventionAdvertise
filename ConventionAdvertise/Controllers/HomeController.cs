@@ -23,13 +23,46 @@ namespace ConventionAdvertise.Controllers
 
         public ActionResult Index()
         {
+
+         
             ConAdViewModel model = new ConAdViewModel
             {
                 ConInformations = repository.ConInformations.OrderBy(p => p.StartDate)
-
             };
 
             return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult AddCon()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddCon(ConInformation newCon)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    db.ConInformations.Add(newCon);
+                    //Doesn't save changes for some reason
+                    db.SaveChanges();
+                }
+            }
+            catch
+            {
+                Console.WriteLine("unable to write");
+            }
+
+            ConAdViewModel model = new ConAdViewModel
+            {
+                ConInformations = repository.ConInformations.OrderBy(p => p.StartDate)
+            };
+
+            return View("Index", model);
+            
         }
     }
 }

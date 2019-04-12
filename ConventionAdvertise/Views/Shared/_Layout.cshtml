@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/MyStyles.css" rel="stylesheet" />
 
     <title>@ViewBag.Title</title>
 </head>
 <body>
-
+    <table>
+        <tr>
+            <th>@Html.ActionLink("Add A Convention", "AddCon")</th>
+        </tr>
+    </table>
+    <br />
     <div class="col-xs-8">
         @RenderBody()
     </div>
