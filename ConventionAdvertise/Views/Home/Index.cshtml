@@ -1,0 +1,21 @@
+﻿@model ConventionAdvertise.Models.ConAdViewModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Upcoming Conventions</h2>
+    <br />
+    @foreach (var con in Model.ConInformations)
+    {
+        if (con.StartDate >= DateTime.Now)
+        {
+            Html.Partial("ConAdSummary", con);
+            <br />
+        }
+    }
+</body>
+</html>
